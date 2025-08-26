@@ -1,0 +1,21 @@
+campaign_id,channel,campaign_name,start_date,end_date
+1,Search Engine,Campaign_1,04-06-2023,15-06-2023
+2,Email,Campaign_2,08-02-2023,26-02-2023
+3,Email,Campaign_3,24-06-2023,07-08-2023
+4,Email,Campaign_4,14-05-2023,26-05-2023
+5,Display,Campaign_5,07-01-2023,31-01-2023
+6,Social Media,Campaign_6,01-05-2023,15-06-2023
+7,Display,Campaign_7,21-06-2023,14-08-2023
+8,Display,Campaign_8,08-04-2023,16-05-2023
+9,Social Media,Campaign_9,26-03-2023,05-04-2023
+10,Search Engine,Campaign_10,14-06-2023,15-07-2023
+11,Search Engine,Campaign_11,07-02-2023,06-04-2023
+12,Email,Campaign_12,03-01-2023,06-02-2023
+13,Display,Campaign_13,28-03-2023,29-04-2023
+14,Affiliate,Campaign_14,26-03-2023,07-04-2023
+15,Email,Campaign_15,04-05-2023,07-06-2023
+16,Display,Campaign_16,10-05-2023,29-06-2023
+17,Email,Campaign_17,19-03-2023,10-04-2023
+18,Search Engine,Campaign_18,22-01-2023,15-02-2023
+19,Email,Campaign_19,28-01-2023,21-02-2023
+20,Search Engine,Campaign_20,09-04-2023,18-05-2023
