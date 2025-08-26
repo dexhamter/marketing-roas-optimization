@@ -123,7 +123,7 @@ Marketing team needs to improve blended ROAS by **15% next quarter** without red
 
 - **Dashboard Screenshots:**
 
-&nbsp; - ![Excel Dashboard](images/images/marketing_attribution.png)
+&nbsp; - ![Excel Dashboard](/images/marketing_attribution.png)
 
 &nbsp; - ![Power BI Dashboard](images/powerbi_dashboard.pdf)
 
