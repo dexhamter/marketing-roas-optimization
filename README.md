@@ -2,7 +2,7 @@
 
 
 
-\## 🎯 Problem
+## 🎯 Problem
 
 Marketing team needs to improve blended ROAS by **15% next quarter** without reducing revenue. Spend is spread across channels like Search, Social, Email, Display, Affiliate.
 
@@ -12,17 +12,17 @@ Marketing team needs to improve blended ROAS by **15% next quarter** without red
 
 
 
-\## 📌 Business Questions
+## 📌 Business Questions
 
-1. \*\*Which channels drive the highest ROAS?\*\*  
+1. **Which channels drive the highest ROAS?**  
 
 &nbsp;  → Descriptive analysis: measure performance by channel.
 
-2\. \*\*Which campaigns are wasting spend (low ROAS, high spend)?\*\*  
+2. **Which campaigns are wasting spend (low ROAS, high spend)?**  
 
 &nbsp;  → Diagnostic analysis: find inefficiencies.  
 
-3\. \*\*Should we shift the budget to different platforms?\*\*  
+3. **Should we shift the budget to different platforms?**  
 
 &nbsp;  → Prescriptive analysis: make recommendations to reallocate spend.
 
@@ -32,14 +32,14 @@ Marketing team needs to improve blended ROAS by **15% next quarter** without red
 
 
 
-\## 📂 Data Sources
+## 📂 Data Sources
 
-* `orders` (order\_id, customer\_id, order\_date, revenue)
-* `web\_sessions` (session\_id, customer\_id, campaign\_id, date)
-* `ad\_spend\_daily` (date, campaign\_id, spend)
-* `orders` (order\_id, customer\_id, order\_date, revenue)
-* `order\_items` (order\_item\_id, order\_id, product\_id, quantity, price)
-* `customers` (customer\_id, first\_order\_date, region)
+* `orders` (order_id, customer_id, order_date, revenue)
+* `web_sessions` (session_id, customer_id, campaign_id, date)
+* `ad_spend_daily` (date, campaign_id, spend)
+* `orders` (order_id, customer_id, order_date, revenue)
+* `order_items` (order_item_id, order_id, product_id, quantity, price)
+* `customers` (customer_id, first_order_date, region)
 
 
 
@@ -47,9 +47,9 @@ Marketing team needs to improve blended ROAS by **15% next quarter** without red
 
 
 
-\## 🛠️ Tools Used
+## 🛠️ Tools Used
 
-* \*\*SQL (SQLite/DB Browser)\*\* → for data joins, attribution, ROAS calculation, data validation
+* **SQL (SQLite/DB Browser)** → for data joins, attribution, ROAS calculation, data validation
 * Excel → pivot tables, charts,  static dashboards
 * Power BI → interactive dashboard
 
@@ -59,65 +59,47 @@ Marketing team needs to improve blended ROAS by **15% next quarter** without red
 
 
 
-\## 🔍 Analysis Process
+## 🔍 Analysis Process
 
 
 
-\### 1. SQL
+### 1. SQL
 
-\- Linked `orders` with `web\_sessions` to attribute revenue to campaigns.  
+- Linked `orders` with `web_sessions` to attribute revenue to campaigns.  
 
-\- Aggregated revenue and spend by \*\*campaign\*\* and \*\*channel\*\*.  
+- Aggregated revenue and spend by **campaign** and **channel**.  
 
-\- Performed validations:  
+- Performed validations:  
 
-&nbsp; - \*\*Total order revenue\*\* = `$778,147.91`  
+&nbsp; - **Total order revenue** = `$778,147.91`  
 
-&nbsp; - \*\*Attributed revenue + Unattributed revenue\*\* = `$778,147.91` ✅
-
-
-
-\### 2. Excel
-
-\- Built pivot tables for channel \& campaign ROAS.  
-
-\- Created charts:  
-
-&nbsp; - \*\*ROAS by Channel\*\* (clustered column)  
-
-&nbsp; - \*\*Revenue Contribution by Channel\*\* (pie)  
-
-&nbsp; - \*\*Spend vs Revenue\*\* (bubble)
+&nbsp; - **Attributed revenue + Unattributed revenue** = `$778,147.91` ✅
 
 
 
-\### 3. Power BI
+### 2. Excel
 
-\- KPI Cards: \*\*Attributed Revenue\*\*, \*\*Total Spend\*\*, \*\*Blended ROAS\*\*  
+- Built pivot tables for channel & campaign ROAS.  
 
-\- Channel-level visuals: ROAS comparison, spend vs revenue  
+- Created charts:  
 
-\- Campaign-level drilldown table  
+&nbsp; - **ROAS by Channel** (clustered column)  
 
-\- Filters/slicers for channels
+&nbsp; - **Revenue Contribution by Channel** (pie)  
 
-
-
----
+&nbsp; - **Spend vs Revenue** (bubble)
 
 
 
-\## 📊 Key Findings
+### 3. Power BI
 
-\- \*\*Affiliate\*\* → Highest ROAS (3.1) but lowest spend → opportunity to scale.  
+- KPI Cards: **Attributed Revenue**, **Total Spend**, **Blended ROAS**  
 
-\- \*\*Display\*\* → High spend, lowest ROAS (1.52) → candidate to cut/reduce.  
+- Channel-level visuals: ROAS comparison, spend vs revenue  
 
-\- \*\*Email \& Search\*\* → Stable revenue drivers (ROAS ~1.7–1.9).  
+- Campaign-level drilldown table  
 
-\- \*\*Social Media\*\* → Mid ROAS (1.93) with moderate spend, could scale selectively.  
-
-\- \*\*Unattributed Revenue\*\* = `$153K` (≈20% of total revenue) → requires deeper investigation.
+- Filters/slicers for channels
 
 
 
@@ -125,49 +107,17 @@ Marketing team needs to improve blended ROAS by **15% next quarter** without red
 
 
 
-\## 💡 Recommendations
+## 📊 Key Findings
 
-\- \*\*Scale\*\* Affiliate and Social Media campaigns with higher ROAS.  
+- **Affiliate** → Highest ROAS (3.1) but lowest spend → opportunity to scale.  
 
-\- \*\*Reduce\*\* investment in Display campaigns.  
+- **Display** → High spend, lowest ROAS (1.52) → candidate to cut/reduce.  
 
-\- \*\*Maintain\*\* spend on Email and Search to preserve stable revenue.  
+- **Email & Search** → Stable revenue drivers (ROAS ~1.7–1.9).  
 
-\- \*\*Investigate\*\* unattributed revenue to identify potential missed attributions.
+- **Social Media** → Mid ROAS (1.93) with moderate spend, could scale selectively.  
 
-
-
----
-
-
-
-\## 📂 Deliverables
-
-\- \*\*SQL Scripts:\*\*  
-
-&nbsp; - \[`channel\_roas.sql`](sql/channel\_roas.sql)  
-
-&nbsp; - \[`campaign\_roas.sql`](sql/campaign\_roas.sql)  
-
-&nbsp; - \[`validations.sql`](sql/validations.sql)
-
-&nbsp; - \[`unattributed\_revenue`](sql/unattributed\_revenue.sql)  
-
-
-
-\- \*\*Excel Dashboard:\*\* \[`marketing\_dashboard.xlsx`](excel/marketing\_dashboard.xlsx)  
-
-
-
-\- \*\*Power BI Dashboard:\*\* \[`marketing\_dashboard.pbix`](powerbi/marketing\_dashboard.pbix)  
-
-
-
-\- \*\*Dashboard Screenshots:\*\*  
-
-&nbsp; - !\[Excel Dashboard](images/excel\_dashboard.png)  
-
-&nbsp; - !\[Power BI Dashboard](images/powerbi\_dashboard.pdf)
+- **Unattributed Revenue** = `$153K` (≈20% of total revenue) → requires deeper investigation.
 
 
 
@@ -175,11 +125,61 @@ Marketing team needs to improve blended ROAS by **15% next quarter** without red
 
 
 
-\## 👤 Author
+## 💡 Recommendations
+
+- **Scale** Affiliate and Social Media campaigns with higher ROAS.  
+
+- **Reduce** investment in Display campaigns.  
+
+- **Maintain** spend on Email and Search to preserve stable revenue.  
+
+- **Investigate** unattributed revenue to identify potential missed attributions.
+
+
+
+---
+
+
+
+## 📂 Deliverables
+
+- **SQL Scripts:**  
+
+&nbsp; - [`channel_roas.sql`](sql/channel_roas.sql)  
+
+&nbsp; - [`campaign_roas.sql`](sql/campaign_roas.sql)  
+
+&nbsp; - [`validations.sql`](sql/validations.sql)
+
+&nbsp; - [`unattributed_revenue`](sql/unattributed_revenue.sql)  
+
+
+
+- **Excel Dashboard:** [`marketing_dashboard.xlsx`](excel/marketing_dashboard.xlsx)  
+
+
+
+- **Power BI Dashboard:** [`marketing_dashboard.pbix`](powerbi/marketing_dashboard.pbix)  
+
+
+
+- **Dashboard Screenshots:**  
+
+&nbsp; - ![Excel Dashboard](images/excel_dashboard.png)  
+
+&nbsp; - ![Power BI Dashboard](images/powerbi_dashboard.pdf)
+
+
+
+---
+
+
+
+## 👤 Author
 
 Mohd Hammad Yousuf
 
-\- This project was created as part of a \*\*portfolio case study\*\* to demonstrate SQL, Excel, and Power BI skills for marketing analytics.
+- This project was created as part of a **portfolio case study** to demonstrate SQL, Excel, and Power BI skills for marketing analytics.
 
 
 
